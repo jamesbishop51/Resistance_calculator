@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<item name="brown" type="color">#532707</item>
+    <item name="red" type="color">#ff0000</item>
+    <item name="orange" type="color">#ff8300</item>
+    <item name="yellow" type="color">#f8ff00</item>
+    <item name="green" type="color">#09ff00</item>
+    <item name="blue" type="color">#0012ff</item>
+    <item name="violet" type="color">#EE82EE</item>
+    <item name="gray" type="color">#808080</item>
+    <item name="gold" type= "color">#D4AF37</item>
+    <item name="silver" type= "color">#c0c0c0</item>-->
+
+
+    <!--<integer-array name="bands">
+        <item>@color/black</item>
+        <item>@color/brown</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/gray</item>
+        <item>@color/white</item>
+    </integer-array>
+    <integer-array name="Multiplier">
+        <item>@color/black</item>
+        <item>@color/brown</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/gray</item>
+        <item>@color/white</item>
+        <item>@color/gold</item>
+        <item>@color/silver</item>
+    </integer-array>
+
+    <integer-array name="Tolerance">
+        <item>@color/brown</item>
+        <item>@color/red</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/gray</item>
+        <item>@color/gold</item>
+        <item>@color/silver</item>
+    </integer-array>-->
+
+
+</resources>

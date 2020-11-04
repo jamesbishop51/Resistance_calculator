@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Resistance calculator</string>
+    <string name="reset">reset</string>
+    <string name="calculate">Calculate</string>
+    <string name="tolerance">Tolerance</string>
+    <string name="multiplier">Multiplier</string>
+    <string name="resistance_value">resistance value:</string>
+    <string name="band_2">band 2</string>
+    <string name="band1">band1</string>
+
+
+    <string-array name="bands">
+        <item>select a colour</item>
+        <item>black</item>
+        <item>brown</item>
+        <item>red</item>
+        <item>orange</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>violet</item>
+        <item>gray</item>
+        <item>white</item>
+    </string-array>
+    <string-array name="multiplier">
+        <item>select a colour</item>
+        <item>black</item>
+        <item>brown</item>
+        <item>red</item>
+        <item>orange</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>violet</item>
+        <item>gray</item>
+        <item>white</item>
+        <item>gold</item>
+        <item>silver</item>
+    </string-array>
+    <string-array name="Tolerance">
+        <item>select a colour</item>
+        <item>brown</item>
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>violet</item>
+        <item>gray</item>
+        <item>gold</item>
+        <item>silver</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/Band1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/bands"
+        app:layout_constraintBottom_toTopOf="@+id/band_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/Multiplier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="1dp"
+        android:entries="@array/multiplier"
+        app:layout_constraintBottom_toTopOf="@+id/tvTolerance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMultiplier" />
+
+    <Spinner
+        android:id="@+id/tolerance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="178dp"
+        android:entries="@array/Tolerance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTolerance" />
+
+    <Spinner
+        android:id="@+id/Band2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/bands"
+        app:layout_constraintBottom_toTopOf="@+id/tvMultiplier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/band_2" />
+
+    <Button
+        android:id="@+id/Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:onClick="doCalculation"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reset"
+        app:layout_constraintTop_toBottomOf="@+id/tolerance"
+        app:layout_constraintVertical_bias="0.283" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:onClick="Reset"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Calculate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tolerance"
+        app:layout_constraintVertical_bias="0.283" />
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="249dp"
+        android:layout_height="25dp"
+        android:text="@string/resistance_value"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Band1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705" />
+
+    <TextView
+        android:id="@+id/band_1"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/band1"
+        app:layout_constraintBottom_toTopOf="@+id/Band1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/band_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/band_2"
+        app:layout_constraintBottom_toTopOf="@+id/Band2"
+        app:layout_constraintEnd_toEndOf="@+id/band_1"
+        app:layout_constraintStart_toStartOf="@+id/Band1"
+        app:layout_constraintTop_toBottomOf="@+id/Band1" />
+
+    <TextView
+        android:id="@+id/tvMultiplier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/multiplier"
+        app:layout_constraintBottom_toTopOf="@+id/Multiplier"
+        app:layout_constraintEnd_toEndOf="@+id/band_2"
+        app:layout_constraintStart_toStartOf="@+id/Band2"
+        app:layout_constraintTop_toBottomOf="@+id/Band2" />
+
+    <TextView
+        android:id="@+id/tvTolerance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/tolerance"
+        app:layout_constraintBottom_toTopOf="@+id/tolerance"
+        app:layout_constraintEnd_toEndOf="@+id/tvMultiplier"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tolerance"
+        app:layout_constraintTop_toBottomOf="@+id/Multiplier" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="349dp"
+        android:layout_height="77dp"
+        android:contentDescription=""
+        app:layout_constraintBottom_toTopOf="@+id/display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039"
+        app:srcCompat="@drawable/resistor" />
+
+    <ImageView
+        android:id="@+id/iband1"
+        android:layout_width="15dp"
+        android:layout_height="75dp"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iband2"
+        android:layout_width="16dp"
+        android:layout_height="55dp"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <ImageView
+        android:id="@+id/imultiplier"
+        android:layout_width="15dp"
+        android:layout_height="55dp"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <ImageView
+        android:id="@+id/itolerance"
+        android:layout_width="16dp"
+        android:layout_height="75dp"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_band1_number"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="93dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/display"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_band2_number"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="93dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/display"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_multiplier_number"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="93dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/display"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_tolerance_number"
+        android:layout_width="82dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="93dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/display"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.032" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
